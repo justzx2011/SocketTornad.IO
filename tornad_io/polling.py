@@ -90,7 +90,7 @@ class HTMLFileSocketIOHandler(PollingSocketIOHandler):
         self.set_header('Content-Type', 'text/html')
         self.set_header('Connection', 'keep-alive')
         self.set_header('Transfer-Encoding', 'chunked')
-        self.write('<html><body>%s' % (x * 244))
+        self.write('<html><body>%s' % (' ' * 244))
         self.open(*args, **kwargs)
 
     @tornado.web.asynchronous
